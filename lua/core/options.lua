@@ -40,6 +40,7 @@ vim.o.linebreak = true
 vim.o.wrap = false
 
 -- spelling
+vim.o.infercase = true
 vim.o.spell = true
 vim.o.spelllang = "en_us,uk"
 
