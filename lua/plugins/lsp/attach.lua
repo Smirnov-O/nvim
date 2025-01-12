@@ -17,17 +17,10 @@ u.aucmd("LspAttach", {
       vim.lsp.buf.format { async = true }
     end, bufnr)
     u.map("n", "]d", function()
-      pcall(vim.diagnostic.jump, { count = 1, float = false })
+      pcall(vim.diagnostic.goto_next, { float = false })
     end, bufnr)
     u.map("n", "[d", function()
-      pcall(vim.diagnostic.jump, { count = -1, float = false })
-    end, bufnr)
-
-    u.map("n", "]D", function()
-      pcall(vim.diagnostic.jump, { count = 1 })
-    end, bufnr)
-    u.map("n", "[D", function()
-      pcall(vim.diagnostic.jump, { count = -1 })
+      pcall(vim.diagnostic.goto_prev, { float = false })
     end, bufnr)
 
     u.map("n", "K", vim.lsp.buf.hover, bufnr)
