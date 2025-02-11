@@ -19,7 +19,6 @@
   "lazy.nvim": { "branch": "main", "commit": "f15a93907ddad3d9139aea465ae18336d87f5ce6" },
   "lazydev.nvim": { "branch": "main", "commit": "a1b78b2ac6f978c72e76ea90ae92a94edf380cfc" },
   "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
-  "luvit-meta": { "branch": "main", "commit": "1df30b60b1b4aecfebc785aa98943db6c6989716" },
   "markview.nvim": { "branch": "dev", "commit": "c76411a2a5422b29ca935b6c212c27e785da2020" },
   "mini.ai": { "branch": "main", "commit": "640418aafb5a6e830eade483cdc2d4f0cd0e3f1a" },
   "mini.bufremove": { "branch": "main", "commit": "bba1d8b413d37081756f59200b8cf756181e5b9a" },

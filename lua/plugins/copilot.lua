@@ -2,7 +2,6 @@ local enabled = true
 
 ---@type LazySpec
 return {
-  enabled = enabled,
   {
     "zbirenbaum/copilot.lua",
     enabled = enabled,

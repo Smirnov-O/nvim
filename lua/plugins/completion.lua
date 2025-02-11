@@ -33,11 +33,7 @@ return {
     ---@type cmp.Config
     ---@diagnostic disable-next-line: missing-fields
     return {
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
+      --- snippets are set up in [luasnip.lua]
       window = {},
       ---@diagnostic disable-next-line: missing-fields
       view = { entries = { follow_cursor = true } },
@@ -101,10 +97,8 @@ return {
       },
       sources = cmp.config.sources {
         { name = "hledger", group_index = 0 },
-        { name = "nvim_lsp", max_item_count = 12 },
-        { name = "buffer", max_item_count = 4 },
-        { name = "luasnip", max_item_count = 3 },
-        { name = "path", max_item_count = 2 },
+        { name = "buffer", group_index = 3, max_item_count = 4 },
+        { name = "path", group_index = 4, max_item_count = 2 },
       },
     }
   end,

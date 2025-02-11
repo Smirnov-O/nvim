@@ -40,8 +40,12 @@ return {
     { "akinsho/org-bullets.nvim", config = true },
     {
       "nvim-cmp",
+      ---@param opts cmp.ConfigSchema
       opts = function(_, opts)
-        table.insert(opts.sources, 1, { name = "orgmode" })
+        table.insert(opts.sources, {
+          name = "orgmode",
+          group_index = 0,
+        })
       end,
     },
   },

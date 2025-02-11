@@ -1,7 +1,25 @@
 ---@type LazySpec
 return {
   "L3MON4D3/LuaSnip",
-  dependencies = { "rafamadriz/friendly-snippets" },
+  dependencies = {
+    "rafamadriz/friendly-snippets",
+    {
+      "nvim-cmp",
+      ---@param opts cmp.ConfigSchema
+      opts = function(_, opts)
+        opts.snippet = {
+          expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+          end,
+        }
+        table.insert(opts.sources, {
+          name = "luasnip",
+          group_index = 2,
+          max_item_count = 3,
+        })
+      end,
+    },
+  },
   build = "make install_jsregexp",
   keys = {
     {

@@ -4,6 +4,8 @@ return {
   event = "BufRead",
   dependencies = {
     "b0o/schemastore.nvim",
+    { import = "plugins.lsp.lazydev" },
+    { import = "plugins.lsp.null-ls" },
     {
       "j-hui/fidget.nvim",
       dependencies = { "nvim-lspconfig" },
@@ -16,8 +18,17 @@ return {
         },
       },
     },
-    { import = "plugins.lsp.lazydev" },
-    { import = "plugins.lsp.null-ls" },
+    {
+      "nvim-cmp",
+      ---@param opts cmp.ConfigSchema
+      opts = function(_, opts)
+        table.insert(opts.sources, {
+          name = "nvim_lsp",
+          group_index = 1,
+          max_item_count = 12,
+        })
+      end,
+    },
     {
       "RRethy/vim-illuminate",
       dependencies = { "nvim-lspconfig" },
