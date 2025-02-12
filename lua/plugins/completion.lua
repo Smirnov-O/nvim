@@ -26,7 +26,6 @@ return {
 
     cmp.setup(opts)
   end,
-
   opts = function()
     local cmp = require "cmp"
 

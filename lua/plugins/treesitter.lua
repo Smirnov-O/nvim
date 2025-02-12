@@ -36,7 +36,9 @@ return {
     lazy = false,
     init = function()
       local get_option = vim.filetype.get_option
-      vim.filetype.get_option = function(filetype, option) ---@diagnostic disable-line: duplicate-set-field
+
+      ---@diagnostic disable-next-line: duplicate-set-field
+      vim.filetype.get_option = function(filetype, option)
         -- stylua: ignore
         return option == "commentstring"
           and require("ts_context_commentstring.internal").calculate_commentstring()
