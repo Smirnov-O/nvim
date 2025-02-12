@@ -32,8 +32,8 @@ return {
     ---@type cmp.Config
     ---@diagnostic disable-next-line: missing-fields
     return {
-      --- snippets are set up in [luasnip.lua]
-      window = {},
+      -- snippets are set up in [luasnip.lua]
+
       ---@diagnostic disable-next-line: missing-fields
       view = { entries = { follow_cursor = true } },
       experimental = { ghost_text = true },

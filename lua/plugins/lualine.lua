@@ -27,7 +27,7 @@ local c = {
   },
   harpoon_status = {
     require("scratch.harpoon_status").status,
-    cond = require("scratch.harpoon_status").exists,
+    -- cond = require("scratch.harpoon_status").exists,
   },
 }
 

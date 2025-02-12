@@ -40,7 +40,9 @@ return {
     local ls = require "luasnip"
     local types = require "luasnip.util.types"
 
-    ls.config.set_config {
+    require("luasnip.loaders.from_vscode").lazy_load()
+
+    ls.setup {
       ext_opts = {
         [types.choiceNode] = {
           passive = {
@@ -56,7 +58,5 @@ return {
         },
       },
     }
-
-    require("luasnip.loaders.from_vscode").lazy_load()
   end,
 }
