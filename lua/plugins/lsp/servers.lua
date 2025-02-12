@@ -56,6 +56,7 @@ return {
       Lua = {
         format = { enable = false },
         completion = { callSnippet = "Replace" },
+        telemetry = { enable = false },
         hint = {
           enable = true,
           arrayIndex = "Disable",
