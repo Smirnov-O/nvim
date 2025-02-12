@@ -5,6 +5,7 @@ return {
     "rafamadriz/friendly-snippets",
     {
       "nvim-cmp",
+      ---@module "cmp"
       ---@param opts cmp.ConfigSchema
       opts = function(_, opts)
         opts.snippet = {

@@ -40,6 +40,7 @@ return {
     { "akinsho/org-bullets.nvim", config = true },
     {
       "nvim-cmp",
+      ---@module "cmp"
       ---@param opts cmp.ConfigSchema
       opts = function(_, opts)
         table.insert(opts.sources, {
