@@ -12,6 +12,6 @@ map("n", "<localleader>c", "<cmd>GoCmt<cr>", true)
 
 map("n", "<localleader>t", "<cmd>GoTestAdd<cr>", true)
 map("n", "<localleader>a", "<cmd>GoTestsAll<cr>", true)
-map("n", "<localleader>e", "<cmd>GoTestsExp<cr>")
+map("n", "<localleader>e", "<cmd>GoTestsExp<cr>", true)
 
 map("n", "<localleader>s", require("scratch.gotest_switcher").switch, true)

@@ -47,12 +47,3 @@ u.aucmd("FileType", {
     }
   end,
 })
-
-u.aucmd("FileType", {
-  group = u.augroup "concealer",
-  pattern = { "markdown", "org" },
-  callback = function()
-    vim.opt.conceallevel = 2
-    vim.opt.concealcursor = "cv"
-  end,
-})
